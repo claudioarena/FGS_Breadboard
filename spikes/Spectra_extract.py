@@ -8,6 +8,7 @@ apwidth = 10
 skysep = 25
 skywidth = 15
 
+
 def showExctractionArea():
     xbins = np.arange(img_spectra.shape[1])
 

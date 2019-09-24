@@ -1,3 +1,8 @@
 .idea/
-.fit
 *.fit
+*/__pycache__/*
+data/
+*.pyc
+venv/
+
+/yacctab.py
