@@ -1,8 +1,17 @@
 from FGS_Breadboard import fgs
 import time
 import matplotlib.pyplot as plt
+import pickle
 
 fgs_var = fgs("COM5", fgs_camera_SerNo="4102821482")
+
+with open(filename, ‘wb’) as f:
+    pickle.dump(your_content, f)
+
+import pickle
+with open(filename, ‘wb’) as f:
+    pickle.dump(your_content, f)
+
 try:
     fgs_var.setup_camera(20)
 
