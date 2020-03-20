@@ -2,7 +2,7 @@ import numpy as np
 from FGS_Breadboard import fgs
 import matplotlib.pyplot as plt
 
-fgs_var = fgs("COM5", fgs_camera_SerNo="4102821482", exp_time=13)
+fgs_var = fgs("COM5", fgs_camera_SerNo="4102821482", exp_time=8)
 fgs_var.set_voltages(50, 50, 50)
 #image = fgs_var.get_frame(bias_correct=True)
 #plt.imshow(image)
@@ -11,7 +11,13 @@ fgs_var.set_voltages(50, 50, 50)
 fgs_var.axis_x_proj = [0.114, -0.312949, -0.01793]  # projection, in volt/pix
 fgs_var.axis_y_proj = [0.0723, 0.19102, -0.1958]  # projection, in volt/pix
 
-pos, errors, t = fgs_var.pid_start(750, 601, repetitions=100)
+pos, errors, t = fgs_var.pid_start(750, 601, repetitions=20)
+
+for y in range(610, 660, 5):
+    pos, errors, t = fgs_var.pid_start(750, y, repetitions=20)
+    print(y)
+
+
 plt.figure()
 plt.scatter(t, errors[:, 0],  c='coral')
 plt.scatter(t, errors[:, 1],  c='lightblue')
