@@ -29,10 +29,10 @@ fgs_var.fgs_cam.set_exposure(8.0)
 def fun_x(time):
 	#f = 1 / 10
 	#return np.sin(2*3.14*f*time)*3 + 650
-	if time < 5:
-		return 660.0
+	if time < 10:
+		return 670.0
 	else:
-		return 660.0
+		return 680.0
 
 
 def fun_y(time):

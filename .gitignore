@@ -7,3 +7,5 @@ venv/
 lib/
 
 /yacctab.py
+output_images/*
+changeCommitts_names.sh
