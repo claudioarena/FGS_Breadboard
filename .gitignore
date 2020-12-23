@@ -9,3 +9,4 @@ lib/
 /yacctab.py
 output_images/*
 changeCommitts_names.sh
+lib/Py-Hardware-Support
